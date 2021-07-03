@@ -7,7 +7,7 @@ const staticServer: any = express.static("build");
 HydycoAdmin.use(staticServer);
 
 HydycoAdmin.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 export { HydycoAdmin };
