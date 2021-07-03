@@ -6,7 +6,7 @@ var express = require("express");
 var path = require("path");
 var HydycoAdmin = new app_1.App();
 exports.HydycoAdmin = HydycoAdmin;
-var staticServer = express.static("build");
+var staticServer = express.static(path.join(__dirname, "build", "index.html"));
 HydycoAdmin.use(staticServer);
 HydycoAdmin.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "build", "index.html"));
