@@ -2,9 +2,7 @@ import { App } from "@tinyhttp/app";
 import * as express from "express";
 import * as path from "path";
 const HydycoAdmin = new App();
-const staticServer: any = express.static(
-  path.join(__dirname, "build", "index.html")
-);
+const staticServer: any = express.static(path.join(__dirname, "build"));
 
 HydycoAdmin.use(staticServer);
 
