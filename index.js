@@ -1,13 +1,10 @@
 "use strict";
-const { Router } = require("express");
-const express = require("express");
-const path = require("path");
-const HydycoAdmin = Router();
-
+var express_1 = require("express");
+var express = require("express");
+var path = require("path");
+var HydycoAdmin = express_1.Router();
 HydycoAdmin.use(express.static(path.join(__dirname, "public")));
-
-HydycoAdmin.get("/", (req, res) => {
+HydycoAdmin.get("/*", function (req, res) {
   return res.sendFile(path.join(__dirname, "public", "index.html"));
 });
-
-module.exports = { HydycoAdmin };
+module.exports = { HydycoAdmin: HydycoAdmin };
