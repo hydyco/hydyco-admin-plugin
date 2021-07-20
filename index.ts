@@ -3,14 +3,11 @@ import * as express from "express";
 import * as path from "path";
 const HydycoAdmin = Router();
 
-HydycoAdmin.use("/static/*", (req, res, next) => {
-  return res.redirect("/admin-ui");
-});
-
-HydycoAdmin.use(express.static(path.join(__dirname, "public")));
-
-HydycoAdmin.use("/admin-ui/*", (req, res, next) => {
-  return res.sendFile(path.join(__dirname, "public", "index.html"));
-});
+HydycoAdmin.use("/img", express.static(path.join(__dirname, "public", "img")));
+HydycoAdmin.use(
+  "/static",
+  express.static(path.join(__dirname, "public", "static"))
+);
+HydycoAdmin.use("/admin-ui/*", express.static(path.join(__dirname, "public")));
 
 export = { HydycoAdmin };
