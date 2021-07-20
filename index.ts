@@ -10,4 +10,6 @@ HydycoAdmin.use(
 );
 HydycoAdmin.use("/admin-ui/*", express.static(path.join(__dirname, "public")));
 
+HydycoAdmin.use("/admin-ui", (req, res) => res.redirect("/admin-ui/"));
+
 export = { HydycoAdmin };
