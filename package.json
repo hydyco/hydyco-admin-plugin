@@ -1,6 +1,6 @@
 {
   "name": "@hydyco/admin-plugin",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Admin UI for Hydyco",
   "main": "index.js",
   "scripts": {
