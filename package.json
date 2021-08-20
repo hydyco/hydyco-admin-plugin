@@ -4,7 +4,8 @@
   "description": "Admin UI for Hydyco",
   "main": "index.js",
   "scripts": {
-    "build": "tsc index.ts"
+    "build": "tsc index.ts",
+    "test": "echo 'Test Passed'"
   },
   "dependencies": {
     "express": "^4.17.1",
